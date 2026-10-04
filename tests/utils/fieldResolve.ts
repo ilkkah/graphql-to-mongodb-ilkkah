@@ -26,7 +26,7 @@ export default (type: GraphQLOutputType, query: string, args?: GraphQLFieldConfi
     const source = new Source(query, 'GraphQL request');
     const document = parse(source);
 
-    execute(schema, document);
+    execute({ schema, document });
 
     return resolveArgs;
 };

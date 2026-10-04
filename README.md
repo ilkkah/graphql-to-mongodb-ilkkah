@@ -1,4 +1,6 @@
-# graphql-to-mongodb 
+# graphql-to-mongodb-ilkkah
+
+Version 1.8 supports GraphQL.js 16.14.2+ and 17.0.2+. Install `graphql` in the application alongside this package. GraphQL types and this package's resolvers must use the same GraphQL.js installation; two installed copies can cause `getMongoDbQueryResolver must recieve a graphql type`.
 [![Build Status](https://travis-ci.org/Soluto/graphql-to-mongodb.svg?branch=master)](https://travis-ci.org/Soluto/graphql-to-mongodb)
 
 If you want to grant your Nodejs GraphQL service a whole lot of the power of the MongoDb database standing behind it with very little hassle, you've come to the right place!

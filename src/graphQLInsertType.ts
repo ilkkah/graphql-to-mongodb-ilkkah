@@ -1,4 +1,4 @@
-import { GraphQLInputObjectType, GraphQLList, GraphQLEnumType, GraphQLNonNull, GraphQLScalarType, GraphQLObjectType, GraphQLInputType } from 'graphql';
+import { GraphQLInputObjectType, GraphQLList, GraphQLEnumType, GraphQLNonNull, GraphQLScalarType, GraphQLObjectType, GraphQLInputType, GraphQLNullableInputType } from 'graphql';
 import { cache, setSuffix, getUnresolvedFieldsTypes, typesCache, FieldMap } from './common';
 
 
@@ -35,7 +35,7 @@ function getGraphQLInsertTypeNested(
     }
 
     if (type instanceof GraphQLNonNull) {
-        return new GraphQLNonNull(getGraphQLInsertTypeNested(type.ofType));
+        return new GraphQLNonNull(getGraphQLInsertTypeNested(type.ofType) as GraphQLNullableInputType);
     }
 
     if (type instanceof GraphQLList) {

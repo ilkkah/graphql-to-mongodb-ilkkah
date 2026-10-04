@@ -14,7 +14,7 @@ export interface MongoDbOptions {
     skip?: number;
     projection?: MongoDbProjection;
 }
-export declare type QueryOptions = {
+export type QueryOptions = {
     differentOutputType?: boolean;
 } & Partial<GetMongoDbProjectionOptions>;
 export declare function getMongoDbQueryResolver<TSource, TContext>(graphQLType: GraphQLFieldsType, queryCallback: QueryCallback<TSource, TContext>, queryOptions?: QueryOptions): GraphQLFieldResolver<TSource, TContext>;

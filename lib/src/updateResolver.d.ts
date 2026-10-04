@@ -9,7 +9,7 @@ export interface UpdateCallback<TSource, TContext> {
         [argName: string]: any;
     }, context: TContext, info: GraphQLResolveInfo): Promise<any>;
 }
-export declare type UpdateOptions = {
+export type UpdateOptions = {
     differentOutputType?: boolean;
     validateUpdateArgs?: boolean;
     overwrite?: boolean;

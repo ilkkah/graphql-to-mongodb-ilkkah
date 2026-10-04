@@ -1,4 +1,4 @@
-export declare type SortDirection = 1 | -1;
+export type SortDirection = 1 | -1;
 export interface SortArg {
     [key: string]: SortArg | SortDirection;
 }

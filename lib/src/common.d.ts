@@ -11,7 +11,7 @@ export declare const getTypesCache: () => {
 export declare function clearTypesCache(): void;
 export declare function cache<T>(cacheObj: object, key: any, callback: cacheCallback<T>): T;
 export declare function setSuffix(text: string, locate: string, replaceWith: string): string;
-export declare type FieldExtensions = {
+export type FieldExtensions = {
     graphqlToMongoDb?: {
         dependencies: string[];
     };
@@ -44,7 +44,7 @@ export interface Field<TType extends GraphQLType, TSource, TContext, TArgs = {
     astNode?: any;
     extensions?: FieldExtensions;
 }
-export declare type GraphQLFieldsType = GraphQLObjectType | GraphQLInterfaceType;
+export type GraphQLFieldsType = GraphQLObjectType | GraphQLInterfaceType;
 export declare function getTypeFields<T extends GraphQLType>(graphQLType: GraphQLFieldsType, filter?: FieldFilter, typeResolver?: TypeResolver<T>, ...excludedFields: string[]): () => FieldMap<T>;
 export declare function getUnresolvedFieldsTypes<T extends GraphQLType>(graphQLType: GraphQLFieldsType, typeResolver?: TypeResolver<T>, ...excludedFields: string[]): () => FieldMap<T>;
 export declare function getInnerType(graphQLType: GraphQLType): GraphQLType;
